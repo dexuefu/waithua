@@ -5,6 +5,9 @@ import org.junit.Test;
 import java.time.LocalDate;
 
 /**
+ * 记录两篇博客，以后对日期时间有需要可以继续完善DateUtils
+ * 1、http://www.jianshu.com/p/2949db9c3df5
+ * 2、http://www.codeceo.com/article/java-8-20-datetime.html
  * Created by jch on 17/1/13.
  */
 public class DateUtilsTest {
