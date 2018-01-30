@@ -13,6 +13,20 @@ package org.waithua.common.just4fun;
  * Error是throwable的子类，代表编译时间和系统错误，用于指示合理的应用程序不应该试图捕获的严重问题。
  * Error由Java虚拟机生成并抛出，包括动态链接失败，虚拟机错误等。程序对其不做处理。
  * Created by jch on 17/1/14.
+ *
+ * Throwable Error      VirtualMachineError  StackOverFlowError
+ *                                           OutOfMemoryError
+ *                      AWTError
+ *           Exception  IOException          EOFException
+ *                                           FileNotFoundException
+ *                      RuntimeException     ArrithmeticException
+ *                                           MissingResourceException
+ *                                           ClassNotFoundException
+ *                                           NullPointerException
+ *                                           IllegalArgumentException
+ *                                           ArrayIndexOutOfBoundsException
+ *                                           UnknowTypeException
+ *
  */
 public class ExceptionTest {
     boolean testEx() throws Exception {
@@ -67,6 +81,15 @@ public class ExceptionTest {
             return ret;
         }
     }
+
+    /**
+     * i=2
+     * i=1
+     * testEx2, catch exception
+     * testEx2, finally; return value=false
+     * testEx1, finally; return value=false
+     * @param args
+     */
 
     public static void main(String[] args) {
         ExceptionTest testException1 = new ExceptionTest();
