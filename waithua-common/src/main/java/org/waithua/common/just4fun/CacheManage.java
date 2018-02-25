@@ -31,9 +31,11 @@ public class CacheManage {
     }
 
     public String get(String key) {
-        System.out.println(Thread.currentThread().getName()
-                + "  cache.get-----" + cache.get(key));
-        return cache.get(key);
+//        synchronized (cache) { // 加上这个就没问题了
+            System.out.println(Thread.currentThread().getName()
+                    + "  cache.get-----" + cache.get(key));
+            return cache.get(key);
+//        }
     }
 
     public static void main(String[] args) {
