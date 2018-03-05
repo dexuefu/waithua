@@ -45,11 +45,15 @@ public class CacheManage {
         list.add("dsfds");
         list.add("dsfds");
         list.add(2,"fff");
+        assert(1==1);
         final CacheManage cacheManage = new CacheManage();
         Thread[] threads = new Thread[THREADS_COUNT];
         for (int i = 0; i < THREADS_COUNT; i++) {
             threads[i] = new Thread(new Runnable() {
                 public void run() {
+
+
+
                     for (int i = 0; i < 10; i++) {
                         cacheManage.put("a", i + 1 + "");
                         try {
